@@ -1,3 +1,4 @@
+import e from "express";
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
@@ -9,6 +10,10 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   profileImage: { type: String },
+  bio: { type: String },
+  profession: { type: String },
+  location: { type: String },
+  gender: {type: String, enum: ["Male", "Female", "Other"]},
   followers: { type: [mongoose.Schema.Types.ObjectId], ref: "User", default: [] },
   following: { type: [mongoose.Schema.Types.ObjectId], ref: "User", default: [] },
   posts: [{ type: mongoose.Schema.Types.ObjectId, ref: "Post" }],
