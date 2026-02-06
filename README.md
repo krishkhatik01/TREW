@@ -1,4 +1,4 @@
-# TREW_APP - Full Stack Authentication System
+# TREW - Full Stack Authentication System
 
 A robust full-stack application built with the **MERN** stack (MongoDB, Express, React, Node.js) featuring secure user authentication, OTP verification, and state management.
 
